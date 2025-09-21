@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 public class Jwt {
-    public String genJwt(String username, String secret, Long exp){
+    public static String genJwt(String username, String secret, Long exp){
         try{
             Algorithm alg = Algorithm.HMAC256(secret);
             return JWT.create()
@@ -24,7 +24,7 @@ public class Jwt {
         }
     }
 
-    public boolean verifyJwt(String token, String secret)
+    public static boolean verifyJwt(String token, String secret)
     {
         try{
             Algorithm alg = Algorithm.HMAC256(secret);
@@ -38,7 +38,7 @@ public class Jwt {
         }
     }
 
-    public Timestamp getIssuedAt(String token, String secret)
+    public static Timestamp getIssuedAt(String token, String secret)
     {
         try {
             Algorithm alg = Algorithm.HMAC256(secret);
@@ -53,7 +53,7 @@ public class Jwt {
         }
     }
 
-    public Timestamp getExpiresAt(String token, String secret)
+    public static Timestamp getExpiresAt(String token, String secret)
     {
         try {
             Algorithm alg = Algorithm.HMAC256(secret);
@@ -68,7 +68,7 @@ public class Jwt {
         }
     }
 
-    public String getUsernameFromJwt(String token, String secret)
+    public static String getUsernameFromJwt(String token, String secret)
     {
         DecodedJWT decodedJWT;
         try{
