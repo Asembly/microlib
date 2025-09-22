@@ -2,4 +2,4 @@ package asembly.event.chat;
 
 import java.util.List;
 
-public record ChatEvent(ChatEventType type, String chat_id, String user_id) {}
+public record ChatEvent(String chat_id, ChatEventType type, String title, List<String> users_id) {}
