@@ -1,7 +1,9 @@
 package asembly.event.user;
 
+import java.util.List;
+
 public record UserChatEvent(
-        UserEventType type,
+        UserChatEventType type,
         String user_id,
-        String chat_id
+        List<String> chats_id
 ) {}
