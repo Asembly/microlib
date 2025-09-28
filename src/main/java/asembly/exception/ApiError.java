@@ -7,7 +7,6 @@ public record ApiError(
         String type,
         StatusCodeException code,
         String message,
-        Map<String, Object> details,
         Instant timestamp,
         String path
 ) {}

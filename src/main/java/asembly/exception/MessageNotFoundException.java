@@ -3,11 +3,10 @@ package asembly.exception;
 import java.util.Map;
 
 public class MessageNotFoundException extends BusinessException {
-    public MessageNotFoundException(String message_id) {
+    public MessageNotFoundException() {
         super(
-                "Message with id: " + message_id + " not found",
-                "MESSAGE_NOT_FOUND",
-                Map.of("message_id", message_id)
+                "Message not found",
+                StatusCodeException.MESSAGE_NOT_FOUND
         );
     }
 }

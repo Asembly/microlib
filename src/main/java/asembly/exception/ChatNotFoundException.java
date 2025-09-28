@@ -3,11 +3,10 @@ package asembly.exception;
 import java.util.Map;
 
 public class ChatNotFoundException extends BusinessException {
-    public ChatNotFoundException(String chat_id) {
+    public ChatNotFoundException() {
         super(
-                "Chat with id: " + chat_id + " not found",
-                "CHAT_NOT_FOUND",
-                Map.of("chat_id", chat_id)
+                "Chat not found",
+                StatusCodeException.CHAT_NOT_FOUND
         );
     }
 }
