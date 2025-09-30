@@ -1,5 +1,7 @@
 package asembly.exception;
 
+import org.springframework.http.HttpStatus;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,5 +20,4 @@ public class BusinessException extends RuntimeException {
         this.errorCode = errorCode;
         this.details = details;
     }
-
 }
